@@ -8,7 +8,7 @@
 </p>
 
 # JX-GS
-Airfoil famiily for fast F3F style slope gliders
+Airfoil family for fast F3F style slope gliders
 
 | Airfoil      | Thickness      | Camber         | Re*Sqrt(cl) |
 | :---:        |     :---       |   :---         |  ---:       |
