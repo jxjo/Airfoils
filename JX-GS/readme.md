@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/jxjo/Airfoils">
+  <a href="https://github.com/jxjo/Airfoils/JX-GS">
     <img src="images/JX-GS-15.png" alt="Logo" width="800" >
   </a>
 </p>
