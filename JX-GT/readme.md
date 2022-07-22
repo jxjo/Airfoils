@@ -23,7 +23,7 @@ The subdirectory [strak](strak/) includes more airfoils in steps of Re*sqrt(cl)=
 
 The airfoils cover 'smoothly' a wide range of Re*sqrt(cl) from 200k down to 50k:
 
-<img src="images/T2_Polars_glide-ratio.png" width=800>
+<img src="images/T2_Polars_glide-ratio.png" width=600>
 
 More polars can be found in the [images](images/) subdirectory.
 
