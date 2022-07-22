@@ -1,5 +1,6 @@
 
 <!-- PROJECT LOGO -->
+![JX-GS family](images/JX-GS_family.png)
 <br />
 <p align="center">
   <a href="https://github.com/jxjo/Airfoils/JX-GS">
