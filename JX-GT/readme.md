@@ -23,7 +23,7 @@ The subdirectory [strak](strak/) includes more airfoils in steps of Re*sqrt(cl)=
 
 The airfoils cover 'smoothly' a wide range of Re*sqrt(cl) from 200k down to 50k:
 
-![JX-GT T2 polar of glide ratio](images/T2_Polars_glide-ratio.png)
+<img src="images/T2_Polars_glide-ratio.png" width=800>
 
 More polars can be found in the [images](images/) subdirectory.
 
