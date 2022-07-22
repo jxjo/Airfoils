@@ -1,12 +1,6 @@
 
 <!-- PROJECT LOGO -->
 ![JX-GS family](images/JX-GS_family.png)
-<br />
-<p align="center">
-  <a href="https://github.com/jxjo/Airfoils/JX-GS">
-    <img src="images/JX-GS_family.png" alt="Logo"  >
-  </a>
-</p>
 
 # JX-GS
 Airfoil family for fast F3F style slope gliders
