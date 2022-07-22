@@ -19,7 +19,7 @@ The airfoil family allows to design a complete wing typically in a span range of
 
 The airfoils cover 'smoothly' a wide range of Re*sqrt(cl) from 120k down to 40k:
 
-<img src="images/JX-RS_family_polars.png" width=600>
+<img src="images/JX-RS_family_polars.png" width=800>
 
 
 ### Calculation of Re*Sqrt(cl)
