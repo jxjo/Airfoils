@@ -17,6 +17,10 @@ The airfoil family allows to design a complete wing typically in a span range of
 | JX-RS        | 7.40% at 25.9%  | 1.30% at 27.5% |   75k       |   medium    |
 | JX-RS-Tip    | 7.20% at 24.3%  | 1.22% at 26.4% |   40k       |   low       |
 
+The airfoils cover 'smoothly' a wide range of Re*sqrt(cl) from 120k down to 40k:
+
+<img src="images/JX-RS_family_polars.png" width=600>
+
 
 ### Calculation of Re*Sqrt(cl)
 The value of Re*Sqrt(cl), which equals to the fixed lift T2 polar, can be easly calculated with the approximation formula
