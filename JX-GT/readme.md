@@ -37,7 +37,7 @@ The value of Re*Sqrt(cl), which equals to the fixed lift T2 polar, can be easly 
 Example: 
 A wing with a wing load of 70 g/dm² will have at chord length 20cm a value of:
 Re*sqrt(cl) = 900 * 20 * sqrt(70) = 150000.
-So airfoil JX-GS-15 would be a good choice at this section.  
+So the main airfoil JX-GT would be a good choice at this section.  
 
 ### License
 Unless otherwise noted, these files are licensed under the Creative Commons [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
