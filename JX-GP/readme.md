@@ -20,16 +20,16 @@ The airfoil family allows to design a complete wing typically in a span range of
 
 This diagram shows typcical size ratios of wing sections equipped with the airfoils.
 
-<img src="images/JX-GP Family in wing sections.png" width=600>
+<img src="images/JX-GP Family in wing sections.png" width=800>
 
 
 Towards the upper end of their Reynolds Design Range the airfoils are optimized for a cl-range around cl=0.15:  
 
-<img src="images/JX-GP polars 400k.png" width=600>
+<img src="images/JX-GP polars 400k.png" width=800>
 
 At the lower end of their Reynolds Design Range the airfoils are optimized for a cl-range around cl=0.22:  
 
-<img src="images/JX-GP polars 300k.png" width=600>
+<img src="images/JX-GP polars 300k.png" width=800>
 
 
 ### Usage example 
