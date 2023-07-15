@@ -1,6 +1,6 @@
 
 <!-- PROJECT LOGO -->
-![JX-GP family](images/JX-GP Family)
+![JX-GP family](images/JX-GP Family.png)
 
 # JX-GP
 Airfoil family for high perfomance F3F/F3B style slope gliders in medium to low conditions
