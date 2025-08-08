@@ -1,5 +1,5 @@
 # Airfoils
-Airfoil Library created with Xoptfoil-JX
+Airfoil Library created with Xoptfoil2
 
 - [JX-GS](JX-GS)    *Airfoil family for high speed F3F slope gliders*
 - [JX-GT](JX-GT)    *Alround F3F/F3B airfoil family focusing on slope gliders*
