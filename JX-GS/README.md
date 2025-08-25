@@ -46,7 +46,11 @@ In 2025 a fundamental revision was made. Bézier curves were used in optimizatio
 
 The airfoil family consists of 4 airfoils each of them optimized within their individual Reynolds profile to have consistent aerodynamic properties over the wing span.
 
-![JX-GS3-100](images/JX-GS3_wingsections.png)
+![JX-GS3](images/JX-GS3_family.png)
+
+The 3 airfoils scaled to their corresponding position with a wing.
+
+![JX-GS3 scaled](images/JX-GS3_family_scaled.png)
 
 ### Nomenclature and Blending
 
@@ -103,8 +107,11 @@ Re*sqrt(cl) = 900 * 20 * sqrt(70) = 150000.
 So airfoil JX-GS-15 would be a good choice at this section.  
 --->
 
+
+### Installation
+
+Download the zip-file including the three airfoils and this README as pdf.
+
 ### License
 Unless otherwise noted, these files are licensed under the Creative Commons [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
-
-
 
