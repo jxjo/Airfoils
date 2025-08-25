@@ -1,9 +1,9 @@
 # Airfoils
-Airfoil Library created with Xoptfoil2
+Airfoil Library created with [Xoptfoil2](https://github.com/jxjo/Xoptfoil2)
 
 - [JX-GS](JX-GS)    *Airfoil family for high speed F3F slope gliders*
 - [JX-GT](JX-GT)    *Alround F3F/F3B airfoil family focusing on slope gliders*
-- [JX-GP](JX-GP)    *F3F/F3B airfoil family focusing on slope gliders im medium to low conditions*
+- [JX-GP](JX-GP)    *F3F/F3B airfoil family focusing on slope gliders in medium to low conditions*
 - [JX-RS](JX-RS)    *Reflexed, fast airfoil family for flying planks*
 - [JX-Fe](JX-Fe)    *Symmetrical airfoil for tailplane or fin with low drag and small dead band*
 
