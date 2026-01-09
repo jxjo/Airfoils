@@ -35,15 +35,25 @@ The four airfoils of the family scaled to their size in wing sections:
 
 <img src="images/JX-ST_small.png"  width="700">
 
-Main properties geometric properties:
+Main geometric properties:
 
 <img src="images/JX-ST_data.png"  width="700">
 
+---
 
+#### About This Document
+
+This document serves two purposes:
+
+*For wing designers:* The Summary and Usage sections provide everything needed to select and apply the JX-ST airfoils to your project. The formula and tables give you the practical tools to determine which airfoils to use where.
+
+*For those interested in the development process:* The Airfoil Design and Optimization sections explain the aerodynamic considerations and methodology used to create these airfoils. These sections assume familiarity with airfoil aerodynamics and polar diagrams.
+
+---
 
 ## Airfoil Design 
 
-This chapter will give a brief description of the approach of the design of the JX-ST airfoil family.
+This chapter describes the design approach and aerodynamic considerations for the JX-ST airfoil family. It explains how the flight envelope was defined, why specific design decisions were made, and how the optimization process balanced conflicting aerodynamic requirements.
 
 ### Flight Envelope 
 
@@ -79,25 +89,21 @@ The corresponding flight lift coefficient Cl can be derived from Re√Cl = 150k,
 | 15 m/s  | 200k      | 0.56  | Relaxed gliding at mid-high lift coefficient    |
 | 45 m/s  | 600k      | 0.06  | High-speed flight at very low lift coefficient |
 
-These operating conditions form the basis for the airfoil optimization described below. The primary optimization uses a Type 1 polar (constant speed) at Re=600k, while an additional Type 1 polar at Re=200k ensures good performance characteristics at lower speeds.
+*Note: At 45 m/s, Cl=0.06 represents nearly zero-lift flight - essentially the glider is flying almost like a flat plate, relying on minimal camber. This extreme condition creates specific challenges for maintaining laminar flow.*
 
-Notably, the airfoil operates at very low lift coefficients during high-speed flight, which poses specific aerodynamic challenges for the optimization process.
+These operating conditions form the basis for the airfoil optimization described below. The primary optimization uses a Type 1 polar (constant speed) at Re=600k, while an additional Type 1 polar at Re=200k ensures good performance characteristics at lower speeds.
 
 ### Dynamic Flight
 
-To understand the requirements for optimal dynamic flight performance, we must examine how dynamic flight maneuvers impose specific demands on the airfoil's aerodynamic characteristics.
-
-The diagram below illustrates a simple acceleration maneuver: the glider dives from altitude and exits the maneuver at high speed. Throughout this sequence, the wing operates across a wide range of speeds and lift coefficients.
-
-The overlaid polar diagram of the root airfoil visualizes this same maneuver as a path through the drag polar. 
+Dynamic flying - diving, accelerating, and pulling out - creates specific challenges for airfoil performance. The diagram below illustrates a simple acceleration maneuver: the glider dives from altitude and exits at high speed. The overlaid polar diagram shows this same maneuver as a path through the drag polar.
 
 <img src="images/dynamic_flight_acceleration.png"  width="700">
 
-The critical phase is the start of acceleration (point 2 in the diagram). Here, at low Reynolds numbers, the airfoil enters a regime of very low lift coefficients. While the airfoil is designed for much higher Reynolds numbers at low Cl, it experiences significant flow separation and high drag in this condition. This makes the airfoil resist acceleration.
+The challenge: At the start of acceleration (point 2), the airfoil must work at low Reynolds numbers AND very low lift coefficients - a difficult combination. While designed for high Reynolds numbers at low Cl, it experiences flow separation and high drag in this condition, resisting acceleration.
 
-The optimization goal is therefore to design an airfoil that maintains acceptable drag coefficients at the combination of low Reynolds numbers and low Cl values.
+The solution: Optimize the airfoil to maintain acceptable drag at this critical combination of low Reynolds numbers and low Cl values. This allows the glider to accelerate smoothly rather than "punching through" a drag barrier.
 
-During the pullout from the dive to level flight (point 4 in the diagram), the airfoil operates at constant high Reynolds numbers while the lift coefficient transitions from very low Cl through high Cl and back again.
+During the pullout (point 4), the airfoil operates at high Reynolds numbers while Cl transitions from very low through high values and back - a less critical regime that most airfoils handle well.
 
 
 ### Base Airfoil JX-GT3-100
@@ -110,18 +116,19 @@ Although the new JX-ST strak is designed for use with flaps, the base airfoil's 
 
 ### Thickness Considerations
 
-To determine the optimal thickness for the new airfoil, a comparative analysis was conducted. The diagram below shows the same airfoil at three different thickness ratios (7%, 9%, and 11%) while maintaining a constant camber of 2%.
+A common assumption is that thinner airfoils are faster. However, for dynamic flying with rapid speed changes, this is not always true. The analysis below compares the same airfoil at three different thickness ratios (7%, 9%, and 11%) while maintaining constant camber of 2%.
 
 <img src="images/thickness_speed.png"  width="900">
 
-The 7% thick airfoil exhibits excellent minimum drag at approximately cl=0.15, but experiences a sharp drag increase at lift coefficients below cl=0.1.
+The 7% airfoil exhibits excellent minimum drag at approximately cl=0.15, but experiences a sharp drag increase at lift coefficients below cl=0.1. This means it performs well at cruise speeds but resists acceleration in dive maneuvers.
 
-This behavior is caused by the airfoil's lower surface geometry. At this thickness combined with higher camber, the lower surface lacks sufficient "belly". At negative angles of attack, this causes the flow to decelerate too rapidly, triggering premature laminar-to-turbulent transition.
+Explanation: At this thickness combined with higher camber, the lower surface lacks sufficient "belly". At negative angles of attack, this causes the flow to decelerate too rapidly, triggering premature laminar-to-turbulent transition.
 
-The 9% thick airfoil shows a slightly higher minimum drag, but maintains significantly lower drag at cl<0.1, making it more suitable for high-speed flight.
+The 9% airfoil shows slightly higher minimum drag, but maintains significantly lower drag at cl<0.1. In practice, this means better acceleration and sustained high-speed flight.
 
-Further increasing thickness to 11% raises drag across the entire lift coefficient range without providing any aerodynamic benefits.
-Conclusion: An airfoil that is too thin is counterproductive for high-speed flight. The guiding principle for thickness selection is: as thick as necessary, as thin as possible. 
+The 11% airfoil raises drag across the entire lift coefficient range without providing aerodynamic benefits.
+
+**Conclusion:** An airfoil that is too thin is counterproductive for high-speed flight. The guiding principle: as thick as necessary, as thin as possible. 
 
 Further investigations showed that 9% thickness for the main airfoil provides a good compromise between aerodynamic performance and structural requirements.
 
@@ -194,7 +201,7 @@ A brief description of the operating points and their role in the overall optimi
 </tr>
 <tr>
 <td>op&nbsp;5</td>
-<td>Together with 'op 6' defines the glide ratio. The counterpars are 'op 3' (at Re=200k) which wants to have a more bubble ramp upper surface and 'op 2' which limits rear loading of the lower surface. </td>
+<td>Together with 'op 6' defines the glide ratio. The counterparts are 'op 3' (at Re=200k) which wants to have a more bubble ramp upper surface and 'op 2' which limits rear loading of the lower surface. </td>
 </tr>
 <tr>
 <td>op&nbsp;6</td>
@@ -249,44 +256,51 @@ Compared to the modified SA7036, the new airfoil has slightly improved high-spee
 
 ### Airfoil Family JX-ST
 
-The greatest performance improvement is achieved when the JX-ST strak is applied to a wing with Reynolds number-matched airfoils positioned at the appropriate wing sections.
+While each airfoil in the JX-ST family performs well individually, the real benefit comes from using them together as a matched set across the wing span.
 
-The following polar diagrams show the four airfoils of the JX-ST family at their respective design Reynolds numbers. It is clearly visible how the characteristics of the three main airfoils JX-ST-200, JX-ST-150, and JX-ST-100 are similar, thereby ensuring a harmonious distribution along the wing span.
+The polar diagrams below show the four airfoils at their design Reynolds numbers. The three main airfoils (JX-ST-200, -150, and -100) share similar characteristics - similar drag buckets, comparable glide ratios, and nearly identical stall behavior. This consistency creates a harmonious lift distribution along the wing with no sudden changes in local flow conditions.
 
-The tip airfoil maintains reasonably good performance even at its low Reynolds numbers.
+The tip airfoil JX-ST-50 maintains adequate performance even at low Reynolds numbers, ensuring the wing tip behaves predictably during all flight phases.
 
-Polars at high-speed flight (design Reynolds numbers):
+High-speed flight (design Reynolds numbers):
 
 <img src="images/JX-ST_polars.png"  width="1000">
 
-Polars at slow flight (approximately one-third of the design Reynolds numbers):
+Slow flight (approximately one-third of design Reynolds numbers):
 
 <img src="images/JX-ST_polars_low_Re.png"  width="1000">
 
+---
+
 ## Usage
 
-### Designing a Wing
+### Selecting the Right Airfoils
 
-To design a wing based on the JX-ST strak, first determine the Re√Cl value at the wing root. This determines the root airfoil for the wing, for example JX-ST-170.
+Step 1: Determine root airfoil
 
-The main performance region of the wing extends in the spanwise direction to approximately 60% of the root chord depth. At this position, place the airfoil corresponding to 60% of 170, which equals JX-ST-100.
-
-Finally, position the tip airfoil JX-ST-50 at the wing tip.
-
-These three airfoils are sufficient to design an aerodynamically high-quality wing.
-
-Depending on additional structural requirements, any number of intermediate airfoils can be positioned between these main sections.
-
-For convenience, you will find all intermediate blended airfoils from JX-ST-200 to JX-ST-50 in steps of Re√Cl = 10k in the [blended](blended) directory.
-
-<img src="images/JX-ST_family_blended.png"  width="700">
-
-The value of Re·√Cl can also be easily calculated using the approximation formula:
+Calculate Re√Cl at the wing root using:
 
 `Re·√Cl = 900 · l · √Ws` where `l` = chord [cm], `Ws` = wing load [g/dm²]
 
-Example: A wing with a wing load of 70 g/dm² at a chord length of 20 cm will have:
-Re·√Cl = 900 × 20 × √70 = 150,000
+Example: A wing with 70 g/dm² wing loading and 20 cm root chord:
+- Re·√Cl = 900 × 20 × √70 = 150,000
+- Root airfoil: JX-ST-150
+
+Step 2: Select the mid-span airfoil
+
+At approximately 60% of root chord depth along the span, use the airfoil corresponding to 60% of the root Re√Cl value.
+- For JX-ST-170 root: 0.6 × 170 = 102 → use JX-ST-100
+- For JX-ST-150 root: 0.6 × 150 = 90 → use JX-ST-90
+
+Step 3: Use JX-ST-50 at the wing tip
+
+These three airfoils (root, mid-span, tip) provide an aerodynamically sound wing design.
+
+Optional: Add intermediate airfoils
+
+For structural or aerodynamic refinement, intermediate blended airfoils are available in steps of Re√Cl = 10k in the [blended](blended) directory.
+
+<img src="images/JX-ST_family_blended.png"  width="700">
 
 
 ### Installation
