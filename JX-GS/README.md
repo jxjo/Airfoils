@@ -48,7 +48,7 @@ The airfoil family consists of 4 airfoils each of them optimized within their in
 
 ![JX-GS3](images/JX-GS3_family.png)
 
-The 3 airfoils scaled to their corresponding position with a wing.
+The 4 airfoils scaled to their corresponding position with a wing.
 
 ![JX-GS3 scaled](images/JX-GS3_family_scaled.png)
 
@@ -94,18 +94,6 @@ The tip airfoil JX-GS3-30 may have a lower alpha_max due to the higher induced a
 
 
 <img src="images/JX-GS3_polars2.png"  width="500">
-
-<!---
-### Calculation of Re*Sqrt(cl)
-The value of Re*Sqrt(cl), which equals to the fixed lift T2 polar, can be easly calculated with the approximation formula
-
-`Re*Sqrt(cl) = 900 * l * sqrt(Ws)` with `l  chord length [cm]` and `Ws wing load    [g/dm²]`
-
-Example: 
-A wing with a wing load of 70 g/dm² will have at chord length 20cm a value of:
-Re*sqrt(cl) = 900 * 20 * sqrt(70) = 150000.
-So airfoil JX-GS-15 would be a good choice at this section.  
---->
 
 
 ### Installation
