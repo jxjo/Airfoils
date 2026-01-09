@@ -41,35 +41,49 @@ Main properties geometric properties:
 
 
 
-## Airfoil Pre-Design 
+## Airfoil Design 
 
 This chapter will give a brief description of the approach of the design of the JX-ST airfoil family.
 
+### Flight Envelope 
 
-### Determination of Re·√Cl
+The first step is to define the Reynolds number and lift coefficient range in which the airfoil will primarily operate.
+The following parameters are determined:
+ - Re·√Cl, which corresponds to the Type 2 polar (constant lift polar) - static flight
+ - Reynolds number range in which the airfoil will be operated dynamically
+ - Lift coefficient range in which the airfoil will primarily operate
 
-The airfoil primarily targets wings with a higher wing loading of 60-80g/dm² and a higher aspect ratio with a root chord of 180-230mm.
 
-With these initial parameters, the value of Re·√Cl is determined, which describes the constant lift polar (Type 2 polar).
+#### Re·√Cl
+
+The airfoil primarily targets wings with a higher wing loading of 60-80 g/dm² and a higher aspect ratio with a root chord of 180-230 mm. 
+With these initial parameters, the value of Re·√Cl is determined, which characterizes the constant lift polar (Type 2 polar).
 
 
 <img src="images/JX-ST-150_design_Re_sqrt.png"  width="400">
 
-The main airfoil will be designed for Re·√Cl = 150.000 and named **JX-ST-150**.
+The value of Re·√Cl can also be easily calculated using the approximation formula:
 
-### Reynolds Number and Lift
+`Re·√Cl = 900 · l · √Ws` where `l` = chord [cm], `Ws` = wing load [g/dm²]
 
-Based on a chord of 200mm, the Re numbers can be calculated.
-From Re·√Cl = 150k, the flown lift coefficient Cl can be derived. 
+The main airfoil will be designed for Re·√Cl = 150,000 and named **JX-ST-150**.
+
+
+#### Re Number and Lift Coefficient
+
+Based on a chord of 200 mm, the Reynolds numbers can be calculated assuming typical flight speeds.
+From Re·√Cl = 150k, the corresponding flight lift coefficient Cl can be derived. 
 
 | Speed   | Reynolds  | Cl    |  Remarks     
 | :---    |   :---    |  :--- | :---      |
-| 15m/s   | 200k      | 0.56  | Relaxed gliding at mid high lift Cl    |
-| 45m/s   | 600k      | 0.06  | Quite fast speed flight at very low Cl |
+| 15 m/s  | 200k      | 0.56  | Relaxed gliding at mid-high lift coefficient    |
+| 45 m/s  | 600k      | 0.06  | High-speed flight at very low lift coefficient |
 
+These operating conditions form the basis for the airfoil optimization described below. The primary optimization uses a Type 1 polar (constant speed) at Re=600k, while an additional Type 1 polar at Re=200k ensures good performance characteristics at lower speeds.
 
-### Dynamic flight
+### Dynamic Flight
 
+To understand the requirements for optimal dynamic flight performance, we must examine how dynamic flight maneuvers impose specific demands on the airfoil's aerodynamic characteristics.
 
 The diagram below illustrates a simple acceleration maneuver: the glider dives from altitude and exits the maneuver at high speed. Throughout this sequence, the wing operates across a wide range of speeds and lift coefficients.
 
@@ -84,7 +98,7 @@ The optimization goal is therefore to design an airfoil that maintains acceptabl
 During the pullout from the dive to level flight (point 4 in the diagram), the airfoil operates at constant high Reynolds numbers while the lift coefficient transitions from very low Cl through high Cl and back again.
 
 
-### Base Airfoil JX-GT3-100 modified
+### Base Airfoil JX-GT3-100
 
 The optimization process doesn't start from scratch but rather uses an existing airfoil that already possesses good fundamental aerodynamic properties. 
 
@@ -115,15 +129,14 @@ While constructing a high aspect ratio wing with an airfoil of just 9% thickness
 
 To benchmark the performance of the new airfoil, the well-established SA7036 airfoil was selected as a reference. Like the JX-GT3-100 base airfoil, it was modified to 9% thickness and 2% camber for direct comparison.
 
-The analysis revealed that the modified SA7036 already approaches the performance targets, with only minor improvements achievable through optimization:
+The analysis revealed that the modified SA7036 already approaches the performance targets, with only minor improvements achievable:
 - The SA7036 is optimized for higher Reynolds numbers, resulting in weaker performance at lower Reynolds numbers (see section "Dynamic Flight")
 - The polar curve shows slight irregularities in the higher cl range, and the maximum angle of attack (alpha_max) could be increased
 - High-speed flight characteristics offer some room for improvement
 
-Geometrically, the two modified airfoils JX-GT3-100 and SA7036 exhibit very similar shapes.
+Geometrically, the two modified airfoils JX-GT3-100 and SA7036 exhibit very similar shapes...
 
 <img src="images/JX-GT3-100_SA7036_modified.png"  width="800">
-
 
 
 
@@ -198,7 +211,7 @@ A brief description of the operating points and their role in the overall optimi
 The airfoil optimization process requires several iterations to find a good balance between the conflicting operating points.
 To achieve this balance, each operating point can be assigned an individual weighting within the objective function, or its target value can be relaxed to be less stringent.
 
-### The Airfoil Family
+### Airfoil Family
 
 After the development of the main airfoil JX-ST-150 was completed, two additional airfoils were developed following the same methodology. These airfoils possess similar aerodynamic characteristics but are designed for different Reynolds number ranges:
 
@@ -248,16 +261,9 @@ Polars at slow flight (approximately one-third of the design Reynolds numbers):
 
 <img src="images/JX-ST_polars_low_Re.png"  width="1000">
 
+## Usage
 
-### Usage and Blended Airfoils
-
-Um eine Tragfläche auf Basis des JX-ST Straks zu entwerfen, ermittle zunächst den Wert von Re√Cl an der Tragflächenwurzel.
-Damit erhält man das Hauptprofil dieser Tragfläche wie zum Beispiel JX-ST-170.
-Der Leistungsbereich der Tragfläche geht in Spannweitenrichtung bis ca. 60% Flächentiefe der Flächentiefe an der Wurzel.
-Setze dort das Profil mit 60% von 170 ist gleich JX-ST-100 ein. 
-Setze schließlich das Außenprofil JX-ST-50 an der Tragflächenspitze ein. 
-
-Diese drei Profile sind ausreichend, um eine aerodynamisch hochwertige Tragfläche zu entwerfen. 
+### Designing a Wing
 
 To design a wing based on the JX-ST strak, first determine the Re√Cl value at the wing root. This determines the root airfoil for the wing, for example JX-ST-170.
 
@@ -273,9 +279,7 @@ For convenience, you will find all intermediate blended airfoils from JX-ST-200 
 
 <img src="images/JX-ST_family_blended.png"  width="700">
 
-#### Calculation of Re√Cl
-
-The value of Re√Cl, which corresponds to the Type 2 polar (constant lift polar), can be easily calculated using the approximation formula:
+The value of Re·√Cl can also be easily calculated using the approximation formula:
 
 `Re·√Cl = 900 · l · √Ws` where `l` = chord [cm], `Ws` = wing load [g/dm²]
 
