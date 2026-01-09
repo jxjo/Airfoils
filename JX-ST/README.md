@@ -60,19 +60,19 @@ The airfoil primarily targets wings with a higher wing loading of 60-80 g/dm² a
 With these initial parameters, the value of Re·√Cl is determined, which characterizes the constant lift polar (Type 2 polar).
 
 
-<img src="images/JX-ST-150_design_Re_sqrt.png"  width="400">
+<img src="images/JX-ST-150_design_Re_sqrt.png"  width="500">
 
 The value of Re·√Cl can also be easily calculated using the approximation formula:
 
 `Re·√Cl = 900 · l · √Ws` where `l` = chord [cm], `Ws` = wing load [g/dm²]
 
-The main airfoil will be designed for Re·√Cl = 150,000 and named **JX-ST-150**.
+For the new airfoil family the main airfoil will be designed for Re·√Cl = 150,000 and named **JX-ST-150**.
 
 
 #### Re Number and Lift Coefficient
 
 Based on a chord of 200 mm, the Reynolds numbers can be calculated assuming typical flight speeds.
-From Re·√Cl = 150k, the corresponding flight lift coefficient Cl can be derived. 
+The corresponding flight lift coefficient Cl can be derived from Re√Cl = 150k, which was determined in the previous step. 
 
 | Speed   | Reynolds  | Cl    |  Remarks     
 | :---    |   :---    |  :--- | :---      |
@@ -80,6 +80,8 @@ From Re·√Cl = 150k, the corresponding flight lift coefficient Cl can be deriv
 | 45 m/s  | 600k      | 0.06  | High-speed flight at very low lift coefficient |
 
 These operating conditions form the basis for the airfoil optimization described below. The primary optimization uses a Type 1 polar (constant speed) at Re=600k, while an additional Type 1 polar at Re=200k ensures good performance characteristics at lower speeds.
+
+Notably, the airfoil operates at very low lift coefficients during high-speed flight, which poses specific aerodynamic challenges for the optimization process.
 
 ### Dynamic Flight
 
@@ -105,20 +107,20 @@ The optimization process doesn't start from scratch but rather uses an existing 
 In this case, the [JX-GT3-100 airfoil](https://github.com/jxjo/Airfoils/tree/main/JX-GT) serves as the starting point, featuring a thickness of 7.7% and camber of 1.7%. 
 Although the new JX-ST strak is designed for use with flaps, the base airfoil's camber is increased to 2% to accommodate the higher wing loading of 60-80g/dm². 
 
+
 ### Thickness Considerations
 
 To determine the optimal thickness for the new airfoil, a comparative analysis was conducted. The diagram below shows the same airfoil at three different thickness ratios (7%, 9%, and 11%) while maintaining a constant camber of 2%.
 
+<img src="images/thickness_speed.png"  width="900">
+
 The 7% thick airfoil exhibits excellent minimum drag at approximately cl=0.15, but experiences a sharp drag increase at lift coefficients below cl=0.1.
 
-This behavior is caused by the airfoil's lower surface geometry. At this thickness combined with higher camber, the lower surface lacks sufficient "belly" (curvature). At negative angles of attack, this causes the flow to decelerate too rapidly, triggering premature laminar-to-turbulent transition.
+This behavior is caused by the airfoil's lower surface geometry. At this thickness combined with higher camber, the lower surface lacks sufficient "belly". At negative angles of attack, this causes the flow to decelerate too rapidly, triggering premature laminar-to-turbulent transition.
 
 The 9% thick airfoil shows a slightly higher minimum drag, but maintains significantly lower drag at cl<0.1, making it more suitable for high-speed flight.
 
 Further increasing thickness to 11% raises drag across the entire lift coefficient range without providing any aerodynamic benefits.
-
-<img src="images/thickness_speed.png"  width="900">
-
 Conclusion: An airfoil that is too thin is counterproductive for high-speed flight. The guiding principle for thickness selection is: as thick as necessary, as thin as possible. 
 
 Further investigations showed that 9% thickness for the main airfoil provides a good compromise between aerodynamic performance and structural requirements.
@@ -175,35 +177,35 @@ A brief description of the operating points and their role in the overall optimi
 
 <table>
 <tr>
-<td style="white-space: nowrap">op 1</td>
+<td>op&nbsp;1</td>
 <td>Helper point to achieve low cd at negative cl under the regime of the main targets</td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 2</td>
+<td>op&nbsp;2</td>
 <td>Controls cd close to cl=0 (high speed flight). As this target requires late laminar-turbulent transition on the lower surface, this point conflicts with operating points 5 and 6, which favor significant rear-loading that limits the laminar run length. </td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 3</td>
+<td>op&nbsp;3</td>
 <td>Helper point at Re=200k to limit drag increase through laminar separation bubbles at lower cl (needed for good acceleration) </td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 4</td>
+<td>op&nbsp;4</td>
 <td>Ensures minimum cd, which is primarily determined by the thickness target of 9%. </td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 5</td>
+<td>op&nbsp;5</td>
 <td>Together with 'op 6' defines the glide ratio. The counterpars are 'op 3' (at Re=200k) which wants to have a more bubble ramp upper surface and 'op 2' which limits rear loading of the lower surface. </td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 6</td>
+<td>op&nbsp;6</td>
 <td>Helper point to control the shape of the polar close to maximum glide</td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 7</td>
+<td>op&nbsp;7</td>
 <td>Determines max glide ratio. Claims more camber which is limited by 'op 2'</td>
 </tr>
 <tr>
-<td style="white-space: nowrap">op 8</td>
+<td>op&nbsp;8</td>
 <td>Defines maximum angle of attack and maximum cl. Claims more camber and a large leading edge radius to reduce leading-edge suction peak. This conflicts with minimized cd at low cl.</td>
 </tr>
 </table>
