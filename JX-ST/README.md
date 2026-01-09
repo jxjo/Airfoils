@@ -183,31 +183,21 @@ The following diagram shows the final airfoil design of the optimization togethe
 
 To illustrate how the optimization objectives are defined, the following describes the role of each operating point and how they interact with each other:
 
-<dl>
-  <dt style="font-style: normal;">op 1</dt>
-  <dd>Helper point to achieve low cd at negative cl under the regime of the main targets</dd>
-  
-  <dt style="font-style: normal;">op 2</dt>
-  <dd>Controls cd close to cl=0 (high speed flight). As this target requires late laminar-turbulent transition on the lower surface, this point conflicts with operating points 5 and 6, which favor significant rear-loading that limits the laminar run length.</dd>
-  
-  <dt style="font-style: normal;">op 3</dt>
-  <dd>Helper point at Re=200k to limit drag increase through laminar separation bubbles at lower cl (needed for good acceleration)</dd>
-  
-  <dt style="font-style: normal;">op 4</dt>
-  <dd>Ensures minimum cd, which is primarily determined by the thickness target of 9%.</dd>
-  
-  <dt style="font-style: normal;">op 5</dt>
-  <dd>Together with 'op 6' defines the glide ratio. The counterparts are 'op 3' (at Re=200k) which wants to have a more bubble ramp upper surface and 'op 2' which limits rear loading of the lower surface.</dd>
-  
-  <dt style="font-style: normal;">op 6</dt>
-  <dd>Helper point to control the shape of the polar close to maximum glide</dd>
-  
-  <dt style="font-style: normal;">op 7</dt>
-  <dd>Determines max glide ratio. Claims more camber which is limited by 'op 2'</dd>
-  
-  <dt style="font-style: normal;">op 8</dt>
-  <dd>Defines maximum angle of attack and maximum cl. Claims more camber and a large leading edge radius to reduce leading-edge suction peak. This conflicts with minimized cd at low cl.</dd>
-</dl>
+**op 1:** Helper point to achieve low cd at negative cl under the regime of the main targets
+
+**op 2:** Controls cd close to cl=0 (high speed flight). As this target requires late laminar-turbulent transition on the lower surface, this point conflicts with operating points 5 and 6, which favor significant rear-loading that limits the laminar run length.
+
+**op 3:** Helper point at Re=200k to limit drag increase through laminar separation bubbles at lower cl (needed for good acceleration)
+
+**op 4:** Ensures minimum cd, which is primarily determined by the thickness target of 9%.
+
+**op 5:** Together with 'op 6' defines the glide ratio. The counterparts are 'op 3' (at Re=200k) which wants to have a more bubble ramp upper surface and 'op 2' which limits rear loading of the lower surface.
+
+**op 6:** Helper point to control the shape of the polar close to maximum glide
+
+**op 7:** Determines max glide ratio. Claims more camber which is limited by 'op 2'
+
+**op 8:** Defines maximum angle of attack and maximum cl. Claims more camber and a large leading edge radius to reduce leading-edge suction peak. This conflicts with minimized cd at low cl.
 
 The airfoil optimization process requires several iterations to find a good balance between the conflicting operating points.
 To achieve this balance, each operating point can be assigned an individual weighting within the objective function, or its target value can be relaxed to be less stringent.
