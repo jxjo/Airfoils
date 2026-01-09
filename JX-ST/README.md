@@ -37,7 +37,7 @@ The four airfoils of the family scaled to their size in wing sections:
 
 Main properties geometric properties:
 
-<img src="images/JX-ST_data.png"  width="600">
+<img src="images/JX-ST_data.png"  width="700">
 
 
 
