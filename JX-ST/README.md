@@ -288,7 +288,7 @@ For structural or aerodynamic refinement, intermediate blended airfoils are avai
 
 ### Installation
 
-Download the zip-file [JX-ST.zip](JX-St.zip) including the four main airfoils, all blended airfoils as described  and this README as pdf.
+Download the zip-file [JX-ST.zip](JX-ST.zip) including the four main airfoils, all blended airfoils as described  and this README as pdf.
 
 ### License
 Unless otherwise noted, these files are licensed under the Creative Commons [Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
