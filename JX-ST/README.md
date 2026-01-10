@@ -161,7 +161,7 @@ The airfoil geometry is represented by two Bezier curves, one for the upper and 
 The first and last control points of the Bezier curve are fixed, defining the leading edge (LE) and trailing edge (TE). The second control point defines the perpendicular starting tangent at the leading edge. This parameterization results in 9 design variables per Bezier curve that are subject to optimization. 
 An additional constraint is applied at the leading edge, where the curvature of both Bezier curves must be equal to achieve C2 continuity (smooth curvature transition).
 
-On the lower surface, the curvature is contrained to have one reversal, resulting in a so-called rear-loaded airfoil with a concave surface toward the trailing edge.
+On the lower surface, the curvature is constrained to have one reversal, resulting in a so-called rear-loaded airfoil with a concave surface toward the trailing edge.
 
 The desired thickness of 9% will be part of the optimization targets.
 

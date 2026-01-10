@@ -3,7 +3,7 @@ An Airfoil Library created using the [AirfoilEditor](https://github.com/jxjo/Air
 
 #### F3B/F3F
 - [JX-GS3](JX-GS)    *Airfoil family for high speed F3F slope gliders*
-- [JX-GT3](JX-GT)    *Alround F3F/F3B airfoil family focusing on slope gliders*
+- [JX-GT3](JX-GT)    *All-round F3F/F3B airfoil family focusing on slope gliders*
 - [JX-GP3](JX-GP)    *F3F/F3B airfoil family focusing on slope gliders in medium to low conditions*
 
 #### Multi Purpose
